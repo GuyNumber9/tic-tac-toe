@@ -1,38 +1,99 @@
-.App {
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(hsla(195, 84%, 59%, 0.75) 0, hsla(195, 84%, 59%, 0.75) 100%), url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4wICg0MDM1YTRmLCAyMDIwLTA1LTAxKSIKICAgaGVpZ2h0PSIxNTAiCiAgIHdpZHRoPSIxNTAiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImJnMi5zdmciCiAgIGlkPSJzdmc4MzkiCiAgIHZpZXdCb3g9IjAgMCAxNTAgMTUwIgogICB2ZXJzaW9uPSIxLjEiPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTg0NSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGRlZnMKICAgICBpZD0iZGVmczg0MyIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ic3ZnODM5IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjIzIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIwIgogICAgIGlua3NjYXBlOmN5PSIxNC4wMTI3MDMiCiAgICAgaW5rc2NhcGU6Y3g9IjQwLjU2ODA3MSIKICAgICBpbmtzY2FwZTp6b29tPSI1LjU1ODU1ODYiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0idHJ1ZSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaWQ9Im5hbWVkdmlldzg0MSIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI4MDMiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNDQwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGdyaWR0b2xlcmFuY2U9IjEwIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiIC8+CiAgPGxpbmUKICAgICBpZD0ibGluZTgzMyIKICAgICBzdHJva2Utd2lkdGg9IjgiCiAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogICAgIHN0cm9rZT0iIzU1NTU1NSIKICAgICB5Mj0iNjIuNDc0OTk4IgogICAgIHkxPSIxMi40NzQ4OTkiCiAgICAgeDI9IjYyLjQ3NDk5OCIKICAgICB4MT0iMTIuNDc0ODk5IiAvPgogIDxsaW5lCiAgICAgaWQ9ImxpbmU4MzUiCiAgICAgc3Ryb2tlLXdpZHRoPSI4IgogICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIKICAgICBzdHJva2U9IiM1NTU1NTUiCiAgICAgeTI9IjEyLjQ3NDg5OSIKICAgICB5MT0iNjIuNDc0OTk4IgogICAgIHgyPSI2Mi40NzQ5OTgiCiAgICAgeDE9IjEyLjQ3NDg5OSIgLz4KICA8Y2lyY2xlCiAgICAgaWQ9ImNpcmNsZTgzNyIKICAgICBzdHJva2Utd2lkdGg9IjgiCiAgICAgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIKICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiCiAgICAgc3Ryb2tlPSIjNTU1NTU1IgogICAgIGZpbGw9Im5vbmUiCiAgICAgcj0iMjUiCiAgICAgY3k9IjExMCIKICAgICBjeD0iMTEyIiAvPgo8L3N2Zz4K");
+  background-size: 40px;
+  background-repeat: repeat;
+}
+
+.app-header {
+  background-color: #fff;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ttt-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  margin-top: 14px;
+  font-family: monaco ,monospace;
+  font-size: 4em;
+  background: url('data:image/svg+xml, <svg viewBox="-5 -5 310 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><line x1="100" y1="0" x2="100" y2="300" stroke="black" stroke-width="5" stroke-linecap="round"></line><line x1="200" y1="0" x2="200" y2="300" stroke="black" stroke-width="5" stroke-linecap="round"></line><line x1="0" y1="100" x2="300" y2="100" stroke="black" stroke-width="5" stroke-linecap="round"></line><line x1="0" y1="200" x2="300" y2="200" stroke="black" stroke-width="5" stroke-linecap="round"></line></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ttt-square {
+  width: 100px;
+  min-height: 100px;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ttt-start-modal, .ttt-end-modal {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsla(240, 45%, 95%, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.ttt-start-modal > div, .ttt-end-modal > div {
   display: flex;
   flex-direction: column;
+  width: 300px;
+  min-height: 200px;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: slategray;
+  background: white;
+  border: 2px solid initial;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.ttt-start-modal button, .ttt-end-modal button {
+  width: 200px;
+  height: 2em;
+  padding: 2px;
+  border: 2px solid slategray;
+  border-radius: 5px;
+  text-align: center;
+  background-color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 600px), (max-height: 600px) {
+  .ttt-board {
+    width: 600px;
+    height: 600px;
+    font-size: 8em;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .ttt-square {
+    width: 200px;
+    min-height: 200px;
+    line-height: 200px;
   }
 }
